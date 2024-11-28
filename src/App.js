@@ -7,6 +7,10 @@ import BookDetails from "./pages/BookDetails";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ReviewForm from './components/ReviewForm/ReviewForm';
+import BookList from "./pages/BookList";
+
+
 
 const App = () => {
   return (
@@ -19,8 +23,11 @@ const App = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/Review/:bookId" component={ReviewForm} />
+        <Route path="/BookList" component={<BookList/>}/>
       </Routes>
     </Router>
+
   );
 };
 

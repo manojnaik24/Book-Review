@@ -1,8 +1,9 @@
+// Updated Register component with 'response' usage
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Register = () => {
+  const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -19,6 +20,9 @@ const Register = () => {
         username,
         password,
       });
+
+      // Log response to debug or use it for further logic
+      console.log(response);
 
       setSuccess("Account created successfully!");
       setTimeout(() => navigate("/login"), 2000); // Redirect to login page after success
@@ -57,4 +61,7 @@ const Register = () => {
   );
 };
 
+
+
 export default Register;
+

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Typography, Container, Box } from "@mui/material";
 
 const Home = () => {
@@ -30,6 +31,17 @@ const Home = () => {
         >
           Login
         </Button>
+        <Link to="/register">
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="large"
+              style={{ margin: "10px" }}
+            >
+              Register
+            </Button>
+            </Link>
+        
       </Box>
     </Container>
   );
